@@ -1,0 +1,14 @@
+
+
+home : affiche le site vitrine avec les offres et l'acces utilisateur
+abo : gère les abonnements des utilisateurs
+panel : le panel admin pour controller l'espace perso du client
+user : gère les utilisateur
+
+niveau utilisateur:
+    - super admin
+    - fournisseur
+    - client
+    - inscrit
+    - visiteur
+    - bannis

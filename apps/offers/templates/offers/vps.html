@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Ma page d'accueil{% endblock %}
+{% block content %}
+
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed efficitur tortor, vel accumsan ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce accumsan felis sit amet risus sagittis, eu tristique leo facilisis.
+    Nunc iaculis nulla vel est porttitor maximus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla ut sapien lobortis, rutrum augue et, scelerisque massa. Curabitur congue tincidunt dolor, in tristique ante pulvinar eget.
+    Praesent egestas nisl quis lacus venenatis consequat.
+
+    Nullam turpis dolor, tristique at justo a, vulputate auctor dolor. Suspendisse faucibus quis velit ut elementum. Aenean lectus nunc, maximus vel lectus at, sagittis venenatis eros. In lobortis ac nulla ut dictum. In id libero molestie, malesuada orci vel, mattis mi. Curabitur quis erat quis urna pulvinar suscipit. Mauris mattis at ex sagittis porttitor.
+
+    <h1>Offres VPS</h1>
+
+        {% for vps in listeVps %}
+        <ul>
+        <li>RAM: {{ vps.ram }} Mo</li>
+        <li>stockage: {{ vps.storage }} Go</li>
+        </ul>
+        {% endfor %}
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed efficitur tortor, vel accumsan ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce accumsan felis sit amet risus sagittis, eu tristique leo facilisis.
+
+    Nunc iaculis nulla vel est porttitor maximus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla ut sapien lobortis, rutrum augue et, scelerisque massa. Curabitur congue tincidunt dolor, in tristique ante pulvinar eget.
+    Praesent egestas nisl quis lacus venenatis consequat.
+
+    Nullam turpis dolor, tristique at justo a, vulputate auctor dolor. Suspendisse faucibus quis velit ut elementum. Aenean lectus nunc, maximus vel lectus at, sagittis venenatis eros. In lobortis ac nulla ut dictum. In id libero molestie, malesuada orci vel, mattis mi. Curabitur quis erat quis urna pulvinar suscipit. Mauris mattis at ex sagittis porttitor.
+
+
+{% endblock %}

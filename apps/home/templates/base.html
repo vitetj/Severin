@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="{% static 'js/lib/jquery.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+    <script type="text/javascript" src="{% static 'js/lib/bootstrap.min.js' %}"></script>
+
+    <title>{% block title %}Mon blog sur les crêpes bretonnes{% endblock %}</title>
+</head>
+
+<body>
+    <div class="conteiner-fluid col-md-10 col-md-offset-1">
+        <header class="row-md-4 page-header">
+            <h1 class="col-md-4">PPanel</h1>
+            <div class="clearfix" />
+        </header>
+
+        {% include "menu.html" %}
+
+        <div class="row-md-12 row-eq-height clearfix">
+            <section id="content" class="col-md-12 well">
+                {% block content %}{% endblock %}
+            </section>
+        </div>
+
+        <footer class="row-md-10 offset-1 well footer">
+            &copy; Crêpes bretonnes
+        </footer>
+    </div>
+</body>
+
+</html>

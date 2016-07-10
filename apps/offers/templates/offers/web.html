@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Ma page d'accueil{% endblock %}
+{% block content %}
+
+        <h1>Offres VPS</h1>
+
+        {% for vps in listeVps %}
+        <ul>
+        <li>RAM: {{ vps.ram }} Mo</li>
+        <li>stockage: {{ vps.storage }} Go</li>
+        </ul>
+        {% endfor %}
+
+{% endblock %}

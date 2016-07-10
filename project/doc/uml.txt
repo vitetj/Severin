@@ -1,0 +1,91 @@
+le diagramme uml textuelle. 
+
+le projet est basé sur un certain nombre de package,
+home: permet d'afficher des pages simple, ainsi que des articles. Il permet donc d'afficher un minimum de contenu static. il integre aussi une notion de tag.
+offers: represente les abonnements que peuvent prendre les utilisateurs
+
+user: represente les utilisateurs, qu'ils soit fourniseur ou simple client. un user ne peux se connecter a l'interface admin (par mesure de securité), sauf, si l'application possede un systeme de droit
+
+
+
+le panneau admin de django est strictement reservé à l'admin, c'est lui qui peut rajouter de nouvelle offres
+
+
+package: home
+    url
+        "/": index
+        "/index": index
+        "/accueil": index
+        "/page/?": getPage
+        "/article/?": getArticle
+        "/tag/?": getTag
+    views
+        index
+        getArticle
+        getPage
+        getTag
+    model
+        class page
+            titre
+            contenu
+            #tag
+        class article
+            titre
+            contenu
+            #tag
+        class tag
+            label
+
+
+package: offers
+    url
+
+    views
+        subscribe(vps || site)
+    model
+        class vps
+            #user.client
+            espace (int)
+            ram (int)
+            mail (int)
+        class site
+            #user.client
+            espace (int)
+            ram (int)
+            mail (int)
+            #user.client
+        class mail
+            #user.client
+            nbCompte (int)
+
+package: user
+    url
+        "/connection": connect
+        "/inscription": subscribe
+        "/profile": profil
+        "/settings/?": setting
+    views
+        connect
+        subscribe
+        getProfil
+        getSetting
+    model
+        client
+            nom
+            prenom
+            adresse
+            ville
+            cp
+            pays
+            mail
+            password
+            type (fournisseurs ou client)
+
+        
+package: panel
+    url
+        "/panel": panel (le panel selon l'utilisateur connecté)
+        
+    views
+
+    model

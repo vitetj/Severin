@@ -1,0 +1,1 @@
+contient tout ce qui est fichier que le code du projet va manipuler : fichiers statiques collectés par ./manage.py collectstatic, fichiers de log, base de données SQLite, dumps, locks, etc.

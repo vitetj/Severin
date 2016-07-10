@@ -1,0 +1,1 @@
+les fichiers de configuration pour le projet, pour ce serveur : le fichiers conf nginx, PostgreSQL, Redis qui auront été générés depuis les templates situés dans project/deploy/. Faites ensuite un lien symbolique depuis ces fichiers dans les dossiers correspondant (par exemple vers /etc/nginx/site-enabled pour un fichier de config nginx).
